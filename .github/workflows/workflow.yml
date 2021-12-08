@@ -44,11 +44,11 @@ jobs:
     - name: Update yamls files
       working-directory: kube-cluster-dwk
       run: |-
-        kustomize edit set image IMAGE_PLACEHOLDER=jylhakos/kube-cluster-dwk:v1.0
+        kustomize edit set image IMAGE_PLACEHOLDER=docker.io/jylhakos/kube-cluster-dwk:v1.0
 
     # Commit and push
     - uses: EndBug/add-and-commit@v7
       with:
         add: 'kube-cluster-dwk/manifests/kustomization.yaml'
-        message: New version release for gitops-app ${{ github.sha }}
+        message: New version release for kube-cluster-dwk
       
