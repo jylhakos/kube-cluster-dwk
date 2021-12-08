@@ -4,5 +4,5 @@ resources:
 - manifests/deployment.yaml
 images:
 - name: IMAGE_PLACEHOLDER
-  newName: jylhakos/dwk-4-gitops-app
+  newName: jylhakos/kube-cluster-dwk
   newTag: v1.0
