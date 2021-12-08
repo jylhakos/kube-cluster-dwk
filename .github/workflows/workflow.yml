@@ -45,7 +45,6 @@ jobs:
       working-directory: kube-cluster-dwk/manifests
       run: |-
         cd kube-cluster-dwk/manifests
-        ls -l
         kustomize edit set image IMAGE_PLACEHOLDER=jylhakos/kube-cluster-dwk:${{ github.sha }}
 
     # Commit and push
