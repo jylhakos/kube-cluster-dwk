@@ -26,7 +26,7 @@ jobs:
       with:
         context: app
         push: true
-        tags: jylhakos/kube-cluster-dwk:${{ github.sha }}
+        tags: jylhakos/kube-cluster-dwk:v1.0
 
   deploy:
     name: Deploy
@@ -44,7 +44,7 @@ jobs:
     - name: Update yamls files
       working-directory: kube-cluster-dwk/manifests
       run: |-
-        kustomize edit set image IMAGE_PLACEHOLDER=jylhakos/kube-cluster-dwk:${{ github.sha }}
+        kustomize edit set image IMAGE_PLACEHOLDER=jylhakos/kube-cluster-dwk:v1.0
 
     # Commit and push
     - uses: EndBug/add-and-commit@v7
