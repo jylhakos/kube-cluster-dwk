@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '4-gitops/app/**'
+      - 'kube-cluster-dwk/app/**'
       - '.github/workflows/gitops-app.yml'
 
 jobs:
