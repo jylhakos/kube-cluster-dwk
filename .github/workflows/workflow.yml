@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'kube-cluster-dwk/app/**'
+      - 'jylhakos/kube-cluster-dwk/app/**'
       - '.github/workflows/workflow.yml'
 
 jobs:
@@ -26,7 +26,7 @@ jobs:
       with:
         context: 4-gitops/app
         push: true
-        tags: jylhakos/dwk-4-gitops-app:${{ github.sha }}
+        tags: jylhakos/kube-cluster-dwk:${{ github.sha }}
 
   deploy:
     name: Deploy
@@ -42,13 +42,13 @@ jobs:
 
     # Update yamls
     - name: Update yamls
-      working-directory: 4-gitops/manifests
+      working-directory: kube-cluster-dwk/manifests
       run: |-
-        kustomize edit set image IMAGE_PLACEHOLDER=jylhakos/dwk-4-gitops-app:${{ github.sha }}
+        kustomize edit set image IMAGE_PLACEHOLDER=jylhakos/kube-cluster-dwk:${{ github.sha }}
 
     # Commit and push
     - uses: EndBug/add-and-commit@v7
       with:
-        add: '4-gitops/manifests/kustomization.yaml'
+        add: 'kube-cluster-dwk/manifests/workflow.yml'
         message: New version release for gitops-app ${{ github.sha }}
       
