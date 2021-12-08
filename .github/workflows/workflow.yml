@@ -1,11 +1,11 @@
-name: Release 4-gitops-app
+name: Release kube-cluster-dwk
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'jylhakos/kube-cluster-dwk/app/**'
+      - 'app/**'
       - '.github/workflows/workflow.yml'
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
     - name: Build and Push
       uses: docker/build-push-action@v2
       with:
-        context: 4-gitops/app
+        context: jylhakos/kube-cluster-dwk
         push: true
         tags: jylhakos/kube-cluster-dwk:${{ github.sha }}
 
