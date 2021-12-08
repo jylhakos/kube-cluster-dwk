@@ -42,7 +42,7 @@ jobs:
 
     # Update yamls
     - name: Update yamls files
-      working-directory: kube-cluster-dwk/manifests
+      working-directory: kube-cluster-dwk
       run: |-
         kustomize edit set image IMAGE_PLACEHOLDER=jylhakos/kube-cluster-dwk:v1.0
 
