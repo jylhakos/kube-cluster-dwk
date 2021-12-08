@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'app/**'
+      - 'manifests'
       - '.github/workflows/workflow.yml'
 
 jobs:
@@ -42,9 +43,8 @@ jobs:
 
     # Update yamls
     - name: Update yamls
-      working-directory: kube-cluster-dwk/manifests
+      working-directory: manifests
       run: |-
-        cd kube-cluster-dwk/manifests
         kustomize edit set image IMAGE_PLACEHOLDER=jylhakos/kube-cluster-dwk:${{ github.sha }}
 
     # Commit and push
