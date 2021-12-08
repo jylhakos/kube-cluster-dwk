@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'kube-cluster-dwk/app/**'
+      - 'app/**'
       - '.github/workflows/workflow.yml'
 
 jobs:
