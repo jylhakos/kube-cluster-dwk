@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'kube-cluster-dwk/app/**'
-      - '.github/workflows/gitops-app.yml'
+      - '.github/workflows/workflow.yml'
 
 jobs:
   build:
