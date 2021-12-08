@@ -41,7 +41,7 @@ jobs:
       uses: imranismail/setup-kustomize@v1
 
     # Update yamls
-    - name: Update yamls
+    - name: Update yamls files
       working-directory: kube-cluster-dwk/manifests
       run: |-
         kustomize edit set image IMAGE_PLACEHOLDER=jylhakos/kube-cluster-dwk:${{ github.sha }}
