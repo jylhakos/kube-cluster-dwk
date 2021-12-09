@@ -7,4 +7,4 @@ resources:
 images:
 - name: IMAGE_PLACEHOLDER
   newName: jylhakos/kube-cluster-dwk
-  newTag: c00c6f0a2e9d63baee3e69a06e26c39026908fac
+  newTag: ecfd0e8d4da848d6c46bfd14cf63257d7ce7f719
