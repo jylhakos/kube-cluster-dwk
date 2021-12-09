@@ -8,6 +8,6 @@ spec:
     kind: GitRepository
     name: example-repo
   interval: 10m
-  path: ./4-gitops/manifests
+  path: ./manifests
   prune: true
   validation: client
