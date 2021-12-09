@@ -50,6 +50,6 @@ jobs:
     # Commit and push
     - uses: EndBug/add-and-commit@v7
       with:
-        add: 'kube-cluster-dwk/manifests/kustomization.yaml'
+        add: 'manifests/kustomization.yaml'
         message: New version release for kube-cluster-dwk
       
